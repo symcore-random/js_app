@@ -1,0 +1,29 @@
+version: "3.0"
+services:  
+  js_frontend:
+    container_name: js_frontend
+    build: 
+      dockerfile: Dockerfile
+      context: js_frontend/
+    ports:
+      - "8003:8009"
+    # volumes:
+    #   - ./frontend_folder:/app1
+
+  js_backend:
+    container_name: js_backend
+    build: 
+      dockerfile: Dockerfile
+      context: js_backend/
+    # this port does not need to be exposed since it is the middleware
+    # ports:
+    #   - "3000:7000"
+    depends_on:
+      - js_frontend
+    # volumes:
+    #   - ./backend_folder:/app1
+  
+  mongo_db:
+    image: mongo
+    ports:
+      - "9000:27017"

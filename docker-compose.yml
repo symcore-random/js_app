@@ -8,7 +8,7 @@ services:
     ports:
       - "8003:8009"
     # volumes:
-    #   - ./frontend_folder:/app1
+    #   - ./js_frontend:/app1
 
   js_backend:
     container_name: js_backend
@@ -21,7 +21,7 @@ services:
     depends_on:
       - js_frontend
     # volumes:
-    #   - ./backend_folder:/app1
+    #   - ./js_backend:/app1
   
   mongo_db:
     image: mongo

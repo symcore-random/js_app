@@ -18,4 +18,4 @@ RUN npm install
 
 # Run app.py when the container launches
 COPY  .  /app1/
-CMD ["node","src/back.js"]
+CMD ["npm", "start"]

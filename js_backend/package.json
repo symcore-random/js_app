@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/back.js",
   "scripts": {
+    "start": "node src/back.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
